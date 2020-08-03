@@ -78,3 +78,12 @@ fos_user:
     from_email:
         address: "mohamed.khrouf21@gmail.com"
         sender_name: "agence"
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationFormType
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
+    organize_migrations: false # Version >=1.2 Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false

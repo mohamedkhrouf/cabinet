@@ -17,7 +17,7 @@ private $router;
     $this->router=$router;
     }
     public  function onRegistrationSuccess(FormEvent $event){
-$url = $this->router->generate('homepage');
+$url = $this->router->generate('doctor_create');
 $response = new RedirectResponse($url);
 $event->setResponse($response);
     }

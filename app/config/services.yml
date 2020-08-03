@@ -40,3 +40,7 @@ services:
         autowire: true
         tags:
             - { name: kernel.event_subscriber }
+    app.form.registration:
+        class: AppBundle\Form\RegistrationFormType
+        tags:
+            - { name: form.type }

@@ -1,0 +1,7 @@
+{% for post in posts %}
+    {{ post.id }}
+    {{ post.username }}
+    <a href="{{ path('doctor_clients_delete', { 'id': post.id }) }}">delete</a>
+    <a href="{{ path('doctor_msg', { 'id': post.id }) }}">send msg</a>
+    <br>
+{% endfor %}

@@ -8,8 +8,11 @@
 					</span>
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_row(form.username) }}
+    {{ form_row(form.cin) }}
+     {{ form_row(form.num) }}
     {{ form_row(form.email) }}
     {{ form_row(form.plainPassword) }}
+
 
 <div>
     <br>
