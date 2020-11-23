@@ -1,4 +1,7 @@
+{% extends 'basea.html.twig' %}
+{% block body %}
 {% for post in posts %}
     {{ post.id }}
     {{ post.username }}
 {% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'basea.html.twig' %}
+{% block body %}
+    {% for msg in msgs %}
+
+        de {{ msg.sender.getCin() }}:
+        {{ msg.titre }}
+        {{ msg.text }}
+
+
+
+        <a href=" http://localhost/agence/public/uploads/{{ msg.file }} ">voir piece jointe</a>
+
+        <br>
+    {% endfor %}
+{% endblock %}

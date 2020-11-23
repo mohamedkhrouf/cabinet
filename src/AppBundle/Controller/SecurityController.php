@@ -19,9 +19,9 @@ class SecurityController extends AbstractController
     public function redirectAction()
     {$authChecker= $this->container->get('security.authorization_checker');
         if ($authChecker->isGranted('ROLE_ADMIN')) {
-            return $this->redirectToRoute('doctor_create');
+            return $this->redirectToRoute('doctor_clients');
         } else if ($authChecker->isGranted('ROLE_USER')) {
-            return $this->redirectToRoute('doctor_create');
+            return $this->redirectToRoute('patient_doctors');
         }else{
             return $this->render('@FOSUser/Security/login_content.html.twig');
         }

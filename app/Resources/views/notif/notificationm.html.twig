@@ -1,0 +1,22 @@
+{% extends 'basea.html.twig' %}
+{% block body %}
+
+
+    <table id="notifications">
+        {% for u in notifications %}
+            <tr>
+
+                <td class="t"> {{  u.title }} </td>
+
+
+
+                <td> <button class="show"><a href="{{ path(u.route, u.parameters) }}">see</a></button></td>
+                <td> <button class="delete"><a href="{{ path('notification_delete', { 'id': u.id } )}}">delete</a></button></td>
+
+            </tr>
+
+        {% else %}
+            <div>list is empty</div>
+        {% endfor %}
+    </table>
+{% endblock %}

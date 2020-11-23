@@ -7,8 +7,10 @@
 						Sign Up
 					</span>
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_row(form.username) }}
-    {{ form_row(form.cin) }}
+cin:<br>
+    {{ form_widget(form.username) }}<br>
+username:<br>
+    {{ form_widget(form.cin) }}
      {{ form_row(form.num) }}
     {{ form_row(form.email) }}
     {{ form_row(form.plainPassword) }}

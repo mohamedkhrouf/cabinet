@@ -9,9 +9,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToOne;
 use Doctrine\ORM\Mapping\JoinColumn;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     message="I think you're already registered!"
+ * )
  */
 class User extends BaseUser
 {
@@ -42,7 +47,86 @@ class User extends BaseUser
      * @ORM\Column(type="string")
      */
     private $num;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $genre;
 
+    /**
+     * @return mixed
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param mixed $age
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+
+    /**
+     * @param mixed $genre
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+    }
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $age;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $description;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $address;
     /**
      * @return mixed
      */
@@ -80,12 +164,14 @@ class User extends BaseUser
         // your own logic
         $this->patients = new ArrayCollection();
         $this->doctors = new ArrayCollection();
-        $this->roles = array('ROLE_USER');
+        $this->roles = array('ROLE_ADMIN');
     }
     public function getPatients()
     {
         return $this->patients;
     }
+    public function makeUser(){
+$this->roles = array('ROLE_USER');}
     public function addPatient(User $patient)
     {   if (!$this->patients->contains($patient)) {
         $this->patients[] = $patient;

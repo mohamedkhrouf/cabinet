@@ -7,13 +7,17 @@ use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\OneToOne;
 use AppBundle\Entity\User;
+use Doctrine\ORM\Mapping\Column;
+use SBC\NotificationsBundle\Builder\NotificationBuilder;
+use SBC\NotificationsBundle\Model\NotifiableInterface;
+
 /**
  * Message
  *
  * @ORM\Table(name="message")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MessageRepository")
  */
-class Message
+class Message implements NotifiableInterface, \JsonSerializable
 {
     /**
      * @var int
@@ -84,7 +88,7 @@ class Message
 
     /**
      * @var string
-     *
+     * @Column(nullable = true)
      * @ORM\Column(name="file", type="string", length=255)
      */
     private $file;
@@ -170,6 +174,69 @@ class Message
     public function getFile()
     {
         return $this->file;
+    }
+    /**
+     * Build notifications on entity creation
+     * @param NotificationBuilder $builder
+     * @return NotificationBuilder
+     */
+    public function notificationsOnCreate(NotificationBuilder $builder)
+    {
+        { $user=$this->getSender();
+            $id= $user->getId();
+            $notification = new Notification();
+            $notification
+
+                ->setTitle('nouveau message a été crée par ' . $user->getCin())
+                ->setDescription($this->getReceiver())
+                ->setRoute('patient_msg')// I suppose you have a show route for your entity
+                ->setParameters(array('id' => $id))
+            ;
+            $builder->addNotification($notification);
+
+            return $builder;
+        }
+    }
+
+    /**
+     * Build notifications on entity update
+     * @param NotificationBuilder $builder
+     * @return NotificationBuilder
+     */
+    public function notificationsOnUpdate(NotificationBuilder $builder)
+    {
+        $notification = new Notification();
+        $notification
+            ->setTitle('un message a été mis a jour par')
+            ->setDescription($this->getSender())
+            ->setRoute('post_show',array('id' => $this->getPostId()))// I suppose you have a show route for your entity
+            ->setParameters(array('id' => $this->id))
+        ;
+        $builder->addNotification($notification);
+
+        return $builder;
+    }
+
+    /**
+     * Build notifications on entity delete
+     * @param NotificationBuilder $builder
+     * @return NotificationBuilder
+     */
+    public function notificationsOnDelete(NotificationBuilder $builder)
+    {
+        return $builder;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
     }
 }
 

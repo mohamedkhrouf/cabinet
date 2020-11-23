@@ -1,0 +1,105 @@
+{% extends 'basea.html.twig' %}
+{% block body %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Table V04</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="{{ asset('images1/icons/favicon.ico')}}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendor1/bootstrap/css/bootstrap.min.css')}}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('fonts1/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendor1/animate/animate.css')}}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendor1/select2/select2.min.css')}}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('vendor1/perfect-scrollbar/perfect-scrollbar.css')}}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css1/util.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css1/main.css')}}">
+        <!--===============================================================================================-->
+    </head>
+<body>
+<h2>mes docteurs</h2>
+<div class="limiter">
+    <div class="container-table100">
+    <div class="wrap-table100">
+    <div class="table100 ver1 m-b-110">
+    <div class="table100-head">
+        <table>
+            <thead>
+            <tr class="row100 head">
+
+                <th class="cell100 column1">cin</th>
+                <th class="cell100 column2">nom prenom</th>
+                <th class="cell100 column3">email</th>
+                <th class="cell100 column4">numero</th>
+                <th class="cell100 column5">action</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="table100-body js-pscroll">
+    <table>
+        <tbody>
+
+        {% for post in posts %}
+            <tr class="row100 body">
+
+                <td class="cell100 column1"> {{ post.username }}</td>
+                <td class="cell100 column2">{{ post.cin }}</td>
+                <td class="cell100 column3">{{ post.email }}</td>
+                <td class="cell100 column4">{{ post.num }}</td>
+                <td class="cell100 column5">
+
+
+
+    <a href="{{ path('patient_msg', { 'id': post.id }) }}"> <button type="button" class="btn btn-warning">message</button></a>
+
+    <a href="{{ path('patient_rdv', { 'id': post.id }) }}"><button type="button" class="btn btn-success">rendez-vous</button></a>
+
+    <a href="{{ path('patient_msgp', { 'id': post.id }) }}"><button type="button" class="btn btn-warning">envoyer message</button></a>
+        </td>
+    </tr>
+{% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+<!--===============================================================================================-->
+<script src="{{ asset('vendor1/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+<script src="{{ asset('vendor1/bootstrap/js/popper.js')}}"></script>
+<script src="{{ asset('vendor1/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+<script src="{{ asset('vendor1/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+<script src="{{ asset('vendor1/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+<script>
+    $('.js-pscroll').each(function(){
+        var ps = new PerfectScrollbar(this);
+
+        $(window).on('resize', function(){
+            ps.update();
+        })
+    });
+
+
+</script>
+
+<!--===============================================================================================-->
+<script src="js1/main.js"></script>
+
+</body>
+</html>
+{% endblock %}

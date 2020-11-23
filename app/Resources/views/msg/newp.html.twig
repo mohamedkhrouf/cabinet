@@ -1,0 +1,10 @@
+{% extends 'basea.html.twig' %}
+{% block body %}
+{{ form_start(form) }}
+{{ form_widget(form.titre) }}
+  {{ form_widget(form.text) }}
+
+
+<input type="submit" value="Create" />
+{{ form_end(form) }}
+{% endblock %}

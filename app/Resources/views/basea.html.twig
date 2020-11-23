@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NewBiz Bootstrap Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="https://i.dlpng.com/static/png/6884997_preview.png" rel="icon">
+    <link href="{{ asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{{ asset('css/style1.css')}}" rel="stylesheet">
+
+    <!-- =======================================================
+      Theme Name: NewBiz
+      Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
+</head>
+
+<body>
+
+<!--==========================
+Header
+============================-->
+<header id="header" class="fixed-top">
+    <div class="container">
+
+        <div class="logo float-left">
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+            <a href="#intro" class="scrollto"><img src="https://i.dlpng.com/static/png/6884997_preview.png" alt="" class="img-fluid">  Cabinet</a>
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+            <ul>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="{{ path('doctor_create') }}">creer un patient</a></li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('doctor_clients') }}">patients</a></li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('rdv_shower') }}">rendez-vous</a></li>
+                {% endif %}
+                {% if not is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('patient_doctors') }}">mes docteurs</a></li>
+                {% endif %}
+                {% if not is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('doctor_show') }}">nos docteurs</a></li>
+                {% endif %}
+                {% if not is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('patient_rv')}}">rendez-vous</a></li>
+                {% endif %}
+                {% if not is_granted('ROLE_ADMIN') %}
+                <li class="drop-down">
+
+                    <a href="">Notification</a>
+
+                    <ul>
+                        {% if not is_granted('ROLE_ADMIN') %}
+                        <li><a href="{{ path('notification_display')}}">messages   {{ render(controller('AppBundle:Notification:countmsg') ) }}</a></li>
+                        {% endif %}
+                        {% if not is_granted('ROLE_ADMIN') %}
+                        <li class="drop-down"><a href="#">rdv</a>
+                            <ul>
+
+                                <li><a href="{{ path('notifrdv_display')}}">new rdv {{ render(controller('AppBundle:Notification:countrdvn') ) }}</a></li>
+
+                                <li><a href="{{ path('notifrdvu_display')}}">updated rdv {{ render(controller('AppBundle:Notification:countrdvu') ) }}</a></li>
+
+
+                            </ul>
+                            {% endif %}
+                        </li>
+
+                    </ul>
+                </li>
+                {% endif %}
+                {% if app.user %}
+                    <li><a href="{{ path('fos_user_security_logout')}}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ path('fos_user_security_login')}}">Login</a></li>
+                {% endif %}
+
+            </ul>
+        </nav><!-- .main-nav -->
+
+    </div>
+</header>
+    <br>
+    <br>
+    <br>
+<br>
+
+<div align="center" >
+    {% block body %}
+
+    {% endblock %}
+</div>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- Uncomment below i you want to use a preloader -->
+<!-- <div id="preloader"></div> -->
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+</style>
+<footer class="footer">
+
+
+
+<div align="center"><img src="{{ asset('images/logo1.png')}}" width="100" ></div>
+
+</footer>
+<!-- JavaScript Libraries -->
+<script src="{{ asset('lib/jquery/jquery.min.js')}}"></script>
+<script src="{{ asset('lib/jquery/jquery-migrate.min.js')}}"></script>
+<script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{ asset('lib/easing/easing.min.js')}}"></script>
+<script src="{{ asset('lib/mobile-nav/mobile-nav.js')}}"></script>
+<script src="{{ asset('lib/wow/wow.min.js')}}"></script>
+<script src="{{ asset('lib/waypoints/waypoints.min.js')}}"></script>
+<script src="{{ asset('lib/counterup/counterup.min.js')}}"></script>
+<script src="{{ asset('lib/owlcarousel/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('lib/isotope/isotope.pkgd.min.js')}}"></script>
+<script src="{{ asset('lib/lightbox/js/lightbox.min.js')}}"></script>
+<!-- Contact Form JavaScript File -->
+<script src="{{ asset('contactform/contactform.js')}}"></script>
+
+<!-- Template Main Javascript File -->
+<script src="{{ asset('js/main1.js')}}"></script>
+
+</body>
+</html>

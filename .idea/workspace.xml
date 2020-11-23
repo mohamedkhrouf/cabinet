@@ -2,36 +2,253 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e818e1-75ff-4e0e-8277-9dcdca18d549" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/doctor/clients.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/doctor/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/msg/msg.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/msg/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/patient/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/rdv/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/rdv/rdv.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/user/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DoctorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PatientController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Rdv.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/MsgDcType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/RdvType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/basea.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/calendar/calendar.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/msg/msgp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/msg/newp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/notif/affich.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/notif/countmsg.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/notif/notification.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/notif/notificationm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/notif/notifview.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/patient/doctors.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/rdv/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/rdv/rdvp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/tables.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/user/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/NotificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Notification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/EventListener/CalendarEventListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/MsgPPtType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/NotificationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/scss-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css1/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css1/util.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-Hairline.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-HairlineItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/Lato-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/Lato/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-ExtraBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/OpenSans/OpenSans-SemiBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/Montserrat-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts1/montserrat/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images1/icons/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/about-extra-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/about-extra-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/about-img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/clients/client-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/header-bg.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/intro-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/intro-img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/logo.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/app1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/app2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/app3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/card1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/card2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/card3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/web1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/web2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/portfolio/web3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/team-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/testimonial-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/testimonial-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/testimonial-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/testimonial-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/main1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js1/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/animate/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/counterup/counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/ionicons/css/ionicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/ionicons/css/ionicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/ionicons/fonts/ionicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/ionicons/fonts/ionicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/ionicons/fonts/ionicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/ionicons/fonts/ionicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/isotope/isotope.pkgd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/isotope/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/jquery/jquery-migrate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/css/lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/css/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/js/lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/lightbox/js/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/mobile-nav/mobile-nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/wow/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/wow/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/bootstrap/js/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/jquery/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/select2/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/select2/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/vendor1/select2/select2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/agence.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agence.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/doctor/clients.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/doctor/clients.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/doctor/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/doctor/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/msg/msg.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/msg/msg.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/msg/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/msg/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/patient/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/patient/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/rdv/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/rdv/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/rdv/rdv.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/rdv/rdv.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/user/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/user/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DoctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PatientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Rdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Rdv.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/EventListener/RedirectAfterRegistrationSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/EventListener/RedirectAfterRegistrationSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/MsgDcType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/MsgDcType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/RdvType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/RdvType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +326,12 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle" />
+      <path value="$PROJECT_DIR$/vendor/adesigns/calendar-bundle" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="1erIKpcz3Tpry98cUMtSrjLizup" />
@@ -116,18 +339,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/views/patient" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\agence\app\Resources\views\patient" />
-      <recent name="C:\wamp64\www\agence\app\Resources\FOSUserBundle\views\Security" />
-      <recent name="C:\wamp64\www\agence\app\Resources\views\images" />
+      <recent name="C:\wamp64\www\agence\web\images" />
       <recent name="C:\wamp64\www\agence\web" />
-      <recent name="C:\wamp64\www\agence\web\js" />
+      <recent name="C:\wamp64\www\agence\app\Resources\views\notif" />
+      <recent name="C:\wamp64\www\agence\src\AppBundle\Controller" />
+      <recent name="C:\wamp64\www\agence\src\AppBundle\Repository" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -136,14 +360,17 @@
       <command value="doctrine:migrations:diff" />
       <command value="s generate:bundle" />
       <command value="c dump-autoload" />
-      <command value="s debug:router" />
-      <command value="s cache:clear" />
       <command value="s doctrine:generate:crud" />
       <command value="c doctrine:migrations:diff" />
       <command value="s doctrine:migrations:diff" />
       <command value="s doctrine:migrations:migrate" />
-      <command value="s doctrine:database:create" />
       <command value="s doctrine:generate:entity" />
+      <command value="s assets:install web" />
+      <command value="assets:install --symlink web" />
+      <command value="s assets:install --symlink web" />
+      <command value="s doctrine:database:create" />
+      <command value="s debug:router" />
+      <command value="s cache:clear" />
       <command value="s doctrine:schema:update --force" />
     </option>
   </component>
@@ -170,6 +397,11 @@
       <option name="presentableId" value="Default" />
       <updated>1595073224001</updated>
       <workItem from="1595073225202" duration="57996000" />
+      <workItem from="1596492746144" duration="50243000" />
+      <workItem from="1597283912228" duration="72799000" />
+      <workItem from="1598040217971" duration="23668000" />
+      <workItem from="1598792482676" duration="1303000" />
+      <workItem from="1598985458785" duration="12026000" />
     </task>
     <servers />
   </component>
